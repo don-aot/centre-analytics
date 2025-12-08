@@ -26,12 +26,12 @@ npm install
 ### Basic Usage
 
 ```typescript
-import { useEaoAnalytics } from '@epic/centre-analytics';
+import { trackAnalytics } from '@epic/centre-analytics';
 
 function RouterProviderWithAuthContext() {
   const { isAuthenticated } = useAuth();
   
-  useEaoAnalytics({
+  trackAnalytics({
     appName: 'epic_submit',
     centreApiUrl: 'https://centre-api.example.com',
   });
@@ -43,7 +43,7 @@ function RouterProviderWithAuthContext() {
 ### With Configuration
 
 ```typescript
-useEaoAnalytics({
+trackAnalytics({
   appName: 'epic_submit',
   centreApiUrl: process.env.VITE_CENTRE_API_URL,
   enabled: isAuthenticated,
@@ -58,7 +58,7 @@ useEaoAnalytics({
 
 ## API
 
-### `useEaoAnalytics(options: CentreAnalyticsOptions)`
+### `trackAnalytics(options: CentreAnalyticsOptions)`
 
 #### Options
 
