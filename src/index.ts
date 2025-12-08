@@ -1,4 +1,4 @@
-export { useEaoAnalytics } from './useEaoAnalytics';
+export { trackAnalytics } from './useEaoAnalytics';
 export type {
   EpicAppName,
   EaoAnalyticsOptions,

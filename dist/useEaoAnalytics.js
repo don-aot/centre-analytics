@@ -8,7 +8,7 @@ const SESSION_STORAGE_KEY = 'epic_eao_analytics_last_recorded';
  * React hook to record user login analytics across EPIC applications
  * Automatically records login analytics when user is authenticated
  */
-export function useEaoAnalytics(options) {
+export function trackAnalytics(options) {
     const { appName, centreApiUrl, enabled = true, onSuccess, onError } = options;
     const { user, isAuthenticated } = useAuth();
     const [isRecording, setIsRecording] = useState(false);

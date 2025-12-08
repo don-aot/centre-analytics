@@ -16,7 +16,7 @@ interface AnalyticsState {
  * React hook to record user login analytics across EPIC applications
  * Automatically records login analytics when user is authenticated
  */
-export function useEaoAnalytics(options: EaoAnalyticsOptions) {
+export function trackAnalytics(options: EaoAnalyticsOptions) {
   const { appName, centreApiUrl, enabled = true, onSuccess, onError } = options;
   const { user, isAuthenticated } = useAuth();
   const [isRecording, setIsRecording] = useState(false);
