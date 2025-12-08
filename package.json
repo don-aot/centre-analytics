@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "EPIC Centre Analytics component for cross-application login analytics recording",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
   "exports": {
     ".": {
+      "source": "./src/index.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
     }
   },
   "scripts": {
@@ -30,7 +33,9 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "tsconfig.json",
+    "package.json"
   ]
 }
 
