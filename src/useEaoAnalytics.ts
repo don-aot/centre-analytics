@@ -43,6 +43,12 @@ export function trackAnalytics(options: EaoAnalyticsOptions) {
         }
       }
 
+    // Check if identity_provider is "idir" - only send analytics for IDIR users
+    const identityProvider = user.profile?.identity_provider;
+    if (identityProvider !== 'idir') {
+      return;
+    }
+
     // Extract user info from token
     const userInfo = extractUserInfo(user);
     if (!userInfo) {
